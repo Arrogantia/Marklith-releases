@@ -1,69 +1,73 @@
 # Marklith
 
-面向本地 Markdown 文档的桌面写作与工作区管理工具。
+**English** | [简体中文](README.zh-CN.md)
 
-[下载与版本说明](https://github.com/Arrogantia/Marklith-releases/releases) · [问题反馈](https://github.com/Arrogantia/Marklith-releases/issues)
+A desktop writing and workspace app for local Markdown documents.
 
-本仓库用于发布 Marklith 安装包、版本说明和使用文档，不包含应用源代码。
+[Downloads & release notes](https://github.com/Arrogantia/Marklith-releases/releases) · [Report an issue](https://github.com/Arrogantia/Marklith-releases/issues)
 
-## 下载
+This repository hosts Marklith installers, release notes, and user documentation. It does not contain the application's source code.
 
-进入 [Releases 页面](https://github.com/Arrogantia/Marklith-releases/releases)，选择对应版本，在 **Assets** 中下载安装包。支持的系统、架构、功能和已知问题以该版本说明为准。
+## Download
 
-目前发布仓库已建立，首个安装包尚未发布。
+Visit [Releases](https://github.com/Arrogantia/Marklith-releases/releases), choose a version, and download the installer under **Assets**. Check the release notes for supported systems, architectures, features, and known limitations.
 
-GitHub 自动提供的 **Source code (zip)** 和 **Source code (tar.gz)** 只是本说明仓库的快照，不是安装包，也不包含 Marklith 应用源码。
+[Download the Windows x64 installer (v0.1.0)](https://github.com/Arrogantia/Marklith-releases/releases/download/v0.1.0/Marklith_0.1.0_x64-setup.exe). The release includes **SHA256SUMS.txt** to verify your download.
 
-## 功能概览
+The v0.1.0 installer is not digitally signed. Windows may display an unknown-publisher or SmartScreen prompt.
 
-- **Markdown 写作**：源码与即时预览切换，支持标题、列表、表格、代码、数学公式与 Mermaid 图表。
-- **本地工作区**：打开文件或文件夹，通过文件树、大纲、标签页和搜索组织文档。
-- **文档与资源管理**：草稿保存与恢复、图片及附件导入、资源引用检查、文档导出。
-- **个性化设置**：中文与英文界面、多种主题、自定义快捷键及快捷键方案。
-- **可选 AI 助手**：多对话标签、历史记录、Markdown 回复、文档上下文和整篇翻译；可配置兼容 API 或受支持的本机 CLI 后端。
+GitHub's automatic **Source code (zip)** and **Source code (tar.gz)** downloads are snapshots of this documentation repository. They are not installers and do not contain the Marklith application source code.
 
-以上是项目功能概览，不代表所有发布版本均已包含或验证全部功能。
+## Features
 
-## 开始使用
+- **Markdown writing**: switch between source and live preview, with headings, lists, tables, code, math, and Mermaid diagrams.
+- **Local workspaces**: open files or folders and organize documents with a file tree, outline, tabs, and search.
+- **Documents and resources**: save and recover drafts, import images and attachments, inspect resource references, and export documents.
+- **Personalization**: English and Chinese interfaces, multiple themes, custom keyboard shortcuts, and shortcut profiles.
+- **Optional AI assistant**: multiple conversation tabs, history, Markdown replies, document context, and full-document translation through a compatible API or supported local CLI backend.
 
-1. 下载并运行适合当前系统的安装包。
-2. 启动 Marklith，通过“文件”菜单打开 Markdown 文件或本地文件夹，也可以新建草稿。
-3. 在编辑器中写作，按需切换源码与即时预览，通过“保存”或“另存为”保存文档。
-4. 在设置中调整语言、主题和快捷键；按需开启 AI 后端。
+This is a project overview. Feature availability and verification status may differ between releases.
 
-升级前请保存正在编辑的文档，并阅读目标版本的升级说明。预发布版本会在版本页面标注 **Pre-release**。
+## Getting started
 
-## 常用快捷键
+1. Download and run the Windows x64 installer. Keep an internet connection available: the installer downloads Microsoft Edge WebView2 Runtime if it is needed.
+2. Launch Marklith. Use the **File** menu to open a Markdown file or a local folder, or create a new draft.
+3. Write in the editor, switch between source and live preview as needed, and use **Save** or **Save As** to save your document.
+4. Adjust the language, theme, and shortcuts in Settings. Enable an AI backend only if you want to use it.
 
-以下为 Windows 默认方案；已有自定义方案可能不同，请以“设置 → 快捷键”为准。
+Save your open documents before upgrading, and read the target version's upgrade notes. Preview releases are marked **Pre-release** on their release page.
 
-| 操作 | 快捷键 |
+## Common shortcuts
+
+These are the Windows defaults. Existing custom profiles may differ; check **Settings → Shortcuts** for your active bindings.
+
+| Action | Shortcut |
 | --- | --- |
-| 新建草稿 | Ctrl+N |
-| 打开文件 | Ctrl+O |
-| 打开文件夹 | Ctrl+Shift+O |
-| 保存 | Ctrl+S |
-| 另存为 | Ctrl+Shift+S |
-| 文档内查找 | Ctrl+F |
-| 切换源码与预览 | Ctrl+/ |
-| 打开设置 | Ctrl+, |
+| New draft | Ctrl+N |
+| Open file | Ctrl+O |
+| Open folder | Ctrl+Shift+O |
+| Save | Ctrl+S |
+| Save As | Ctrl+Shift+S |
+| Find in document | Ctrl+F |
+| Toggle source and preview | Ctrl+/ |
+| Open Settings | Ctrl+, |
 
-## AI 功能与数据
+## AI features and your data
 
-AI 后端默认关闭。启用后需要自行配置兼容服务或受支持的本机 CLI，并使用自己的账户或 API 凭据。可用模型、服务费用及后端兼容范围由对应服务和版本说明决定。
+AI backends are disabled by default. To use them, configure a compatible service or supported local CLI with your own account or API credentials. Available models, service charges, and backend compatibility depend on the provider and the release.
 
-发送消息、附加文档或进行翻译时，相关内容会交给所选后端处理。Agent 文件操作遵循应用中的权限设置；需要额外验证的能力会在界面中提示。普通本地文档编辑无需启用 AI。
+When you send a message, attach a document, or request a translation, the relevant content is passed to your selected backend. Agent file operations follow the app's permission settings. Features that require additional verification are indicated in the interface. Editing local documents does not require AI.
 
-## 问题反馈
+## Feedback
 
-请在 [Issues](https://github.com/Arrogantia/Marklith-releases/issues) 中提供：
+Please include the following when opening an [issue](https://github.com/Arrogantia/Marklith-releases/issues):
 
-- Marklith 版本、系统版本与设备架构。
-- 可复现的操作步骤、预期结果和实际结果。
-- 必要的截图或最小示例文档。
+- Your Marklith version, operating system version, and device architecture.
+- Steps to reproduce, the expected result, and what actually happened.
+- Relevant screenshots or a minimal sample document.
 
-这是公开反馈区，请移除示例和截图中的个人信息、API 密钥及敏感文档内容。
+Issues are public. Remove personal information, API keys, and sensitive document content from your examples and screenshots.
 
-## 关于此仓库
+## About this repository
 
-此仓库独立维护发布记录，仅公开使用说明和已发布的二进制附件。应用源码及开发提交历史不在此仓库中提供。安装包及其所含第三方组件的许可信息以对应版本随附说明为准。
+This repository maintains its own release history and publishes user documentation and binary release attachments. Application source code and development history are not provided here. Refer to the accompanying release materials for software and third-party licensing information.
